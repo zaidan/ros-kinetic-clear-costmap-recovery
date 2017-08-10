@@ -1,11 +1,10 @@
-# Script generated with import_catkin_packages.py
-# For more information: https://github.com/bchretien/arch-ros-stacks
+# Contributor: Firas Zaidan <firas@zaidan.de>
 pkgdesc="ROS - This package provides a recovery behavior for the navigation stack that attempts to clear space by reverting the costmaps used by the navigation stack to the static map outside of a given area."
 url='http://wiki.ros.org/clear_costmap_recovery'
 
 pkgname='ros-kinetic-clear-costmap-recovery'
-pkgver='1.14.0'
-_pkgver_patch=1
+pkgver='1.14.1'
+_pkgver_patch=0
 arch=('any')
 pkgrel=1
 license=('BSD')
@@ -30,15 +29,15 @@ depends=(${ros_depends[@]}
   eigen3)
 
 # Git version (e.g. for debugging)
-_tag=release/kinetic/clear_costmap_recovery/${pkgver}-${_pkgver_patch}
-_dir=${pkgname}
-source=("${_dir}"::"git+https://github.com/ros-gbp/navigation-release.git"#tag=${_tag})
-sha256sums=('SKIP')
+#_tag=release/kinetic/clear_costmap_recovery/${pkgver}-${_pkgver_patch}
+#_dir=${pkgname}
+#source=("${_dir}"::"git+https://github.com/ros-gbp/navigation-release.git"#tag=${_tag})
+#sha256sums=('SKIP')
 
 # Tarball version (faster download)
-#_dir="navigation-release-release-kinetic-clear_costmap_recovery-${pkgver}-${_pkgver_patch}"
-# source=("${pkgname}-${pkgver}-${_pkgver_patch}.tar.gz"::"https://github.com/ros-gbp/navigation-release/archive/release/kinetic/clear_costmap_recovery/${pkgver}-${_pkgver_patch}.tar.gz")
-# sha256sums=('b32ac24e628a51694c74784ccb6fab54aaab500c7bd056086276600c66e088f7')
+_dir="navigation-release-release-kinetic-clear_costmap_recovery-${pkgver}-${_pkgver_patch}"
+ source=("${pkgname}-${pkgver}-${_pkgver_patch}.tar.gz"::"https://github.com/ros-gbp/navigation-release/archive/release/kinetic/clear_costmap_recovery/${pkgver}-${_pkgver_patch}.tar.gz")
+ sha256sums=('aa9a4aad6055676116e1f3aad7f362c36fb3d2b52b57fa12e834208329bd57aa')
 
 build() {
   # Use ROS environment variables
